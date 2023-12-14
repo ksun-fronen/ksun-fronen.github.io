@@ -1,1 +1,45 @@
-Site Building...............
+<!doctype html>
+<html lang="en" style="--document-title: '测试';">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <!--    <link rel="icon" type="image/svg+xml" href="/favicon.png"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        .title:after {
+            content: var(--document-title);
+        }
+    </style>
+    <title class="title">#{webSiteTitle}</title>
+    <script>
+      window.setTitle = function (title, appendString) {
+        appendString = appendString || "#{webSiteTitle} - ";
+        document.title = appendString + title;
+      };
+    </script>
+    <style>
+        html{
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: center;
+
+            > body {
+                color:#fff;
+                font-size: clamp(30px, 10vw, 10rem);
+                font-weight: bold;
+                user-select: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<span>Site Building....</span>
+<div id="app"></div>
+<!--<script type="module" src="/src/main.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+        integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+</body>
+</html>
