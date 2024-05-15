@@ -8,7 +8,7 @@ window.setTitle = function (title, appendString) {
 window.setLoadingState = (function () {
   let int;
   let start = Date.now();
-
+  return () => ''
   function getLoadingState() {
     try {
       return parseFloat(document.body.style.getPropertyValue("--loading-progress")) || 0;
@@ -79,6 +79,8 @@ function onFinishScriptList() {
       document.getElementById("LoadingSVG").style.display = "none";
       document.body.classList.remove("overflow-hidden");
       mask3Container.removeEventListener("animationend", _AnimationEnd);
+      window.removeEventListener("resize", window.$$__ISUMI_SET_SVG_VIEW_BOX);
+      delete window.$$__ISUMI_SET_SVG_VIEW_BOX;
     }
   });
   textContainer.classList.add("start");
