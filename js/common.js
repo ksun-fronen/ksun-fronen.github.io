@@ -48,6 +48,7 @@
       }
     };
 
+/*
     int = setInterval(function () {
       const len = getLoadingState();
       if (len <= 70) {
@@ -56,6 +57,7 @@
 
       clearInterval(int);
     }, 1000);
+*/
 
     return state;
   })();
